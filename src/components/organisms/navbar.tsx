@@ -2,6 +2,7 @@ import icon from '@/assets/icon.png';
 import Image from 'next/image';
 import Button from '../atoms/button';
 import Link from 'next/link';
+import { Lock } from 'lucide-react';
 
 export default function Navbar() {
     return (
@@ -19,6 +20,13 @@ export default function Navbar() {
 
                     <Button roundedVariant='secondary'>Candidatar-se</Button>
                 </Link>
+
+                  <Link href='/login' className='flex
+                   px-4 py-2 items-center gap-2
+                  bg-[#eee] hover:bg-[#e4e4e4] rounded-lg'>
+                    <Lock size={18} />
+                        Entrar
+                  </Link>
             </div>
 
         </nav>
