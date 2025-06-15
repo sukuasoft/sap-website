@@ -1,103 +1,94 @@
-import Image from "next/image";
+import Button from "@/components/atoms/button";
+import AboutDetailsItem from "@/components/molecules/about-details-item";
+import BenefitsCard from "@/components/molecules/benefits-card";
+import FaqItem from "@/components/molecules/faq-item";
+import Footer from "@/components/organisms/footer";
+import Header from "@/components/organisms/header";
+import Navbar from "@/components/organisms/navbar";
+import { Globe, GraduationCap, Users } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div>
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <Header>
+        <div className="bg-[url('/images/header-image1.png')] bg-cover bg-center flex-1 w-full 
+        flex  flex-col justify-end text-white py-20 px-20 ">
+          <div className="w-[550px]">
+            <h1 className="text-4xl font-bold mb-2">Transforme seu futuro com uma Bolsa de Estudos Exclusiva!</h1>
+            <p>Descubra oportunidades de bolsas de estudo para estudantes talentosos do Brasil e de países de língua portuguesa. Invista no seu futuro acadêmico e profissional com o nosso programa de bolsas.</p>
+            <div className="flex gap-2 text-xl mt-4">
+              <Link href='/fazer-candidatura'>
+                <Button roundedVariant="secondary">Fazer Candidatura</Button>
+              </Link>
+              <Link href='/consulta'>
+              <Button roundedVariant="secondary" variant="secondary">Consultar Resultado</Button>
+           </Link>
+            </div>
+
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </Header>
+
+      <section className="px-20 py-20">
+        <span className="bg-[#E8EDF2] text-[#0D141C]  px-6 py-3 font-[700] w-fit">Fazer Candidatura</span>
+        <div className="w-[550px]  mt-6">
+          <h1 className="text-4xl font-bold mb-2 text-[#0B0032]">Transforme seu futuro com uma Bolsa de Estudos Exclusiva!</h1>
+          <p className="text-[#0B0032]">Descubra oportunidades de bolsas de estudo para estudantes talentosos do Brasil e de países de língua portuguesa. Invista no seu futuro acadêmico e profissional com o nosso programa de bolsas.</p>
+        </div>
+
+        <div className="flex mt-25 gap-4">
+          <BenefitsCard icon={<GraduationCap />} description="Acesso a bolsas de estudo em universidades de renome, com foco em cursos de alta demanda no mercado." title="Oportunidades Exclusivas" imageUrl="/images/benefits-image1.png" />
+
+          <div className="-translate-y-[50px]">
+            <BenefitsCard icon={<Users />} description="Mentores experientes acompanham os bolsistas, oferecendo orientação e suporte para o desenvolvimento de suas carreiras." title="Mentoria Personalizada" imageUrl="/images/benefits-image2.png" />
+          </div>
+          <BenefitsCard icon={<Globe />} title="Comunidade Global" description="Integração em uma rede global de estudantes e profissionais, promovendo o intercâmbio de ideias e oportunidades." imageUrl="/images/benefits-image3.png" />
+        </div>
+      </section>
+
+      <section className="px-20 py-20 flex">
+        <div className="bg-[url('/images/about-image1.png')] px-10 pt-10 pb-5 text-white bg-[#0000009a]  bg-blend-multiply  w-full bg-cover bg-center flex flex-col rounded-xl">
+          <div className="w-[450px]">
+            <h1 className="font-bold text-2xl mb-2">Sobre a Bolsa de Estudo</h1>
+            <p className="font-[400]">A Bolsa de Estudo Éxito é uma iniciativa que visa apoiar estudantes talentosos e dedicados, mas com recursos financeiros limitados, a alcançar seus objetivos acadêmicos. </p>
+            <div className="grid grid-cols-2 mt-20 gap-6">
+                <AboutDetailsItem title="Mensalidade" description="Cobre integralmente as mensalidades do curso escolhido." />
+                <AboutDetailsItem title="Transporte" description="Auxílio para despesas com transporte." />
+                <AboutDetailsItem title="Alimentação" description="Subsídio para gastos com alimentação." />
+                <AboutDetailsItem title="Materiais" description="Recursos para compra de livros e materiais didáticos." />
+            </div>
+        
+          </div>
+              <Link className="mt-6 ml-auto border border-white border-solid rounded-lg
+            px-4 py-2 hover:bg-white hover:text-black block" href='/fazer-candidatura'>
+            Fazer candidatura
+            </Link>
+        </div>
+      </section>
+
+      <section className="px-20 py-20">
+            <h1 className="text-4xl font-bold mb-8">Perguntas frequentes</h1>
+
+            <div className="flex flex-col gap-3">
+              <FaqItem title="Quem pode se candidatar?">
+                Estudantes com média acadêmica igual ou superior a 8.5 e comprovante de matrícula em curso de graduação.
+              </FaqItem>
+              <FaqItem title="Quais os critérios de seleção?">
+                Teste
+              </FaqItem>
+
+              <FaqItem title="Como é o processo de aplicação?">
+                  Teste
+              </FaqItem>
+            </div>
+
+
+      </section>
+      <Footer />
     </div>
   );
 }
