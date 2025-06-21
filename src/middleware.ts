@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   const subdomain = host?.split('.')[0] || '';
 
-  if (subdomain === 'admin' && adminRoutes.includes(pathname)) {
+  if (subdomain.startsWith('admin') && adminRoutes.includes(pathname)) {
     return NextResponse.rewrite(new URL(`/admin${pathname}`, request.url));
   }
   else if (pathname.startsWith('/admin')) {
