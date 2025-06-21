@@ -15,6 +15,7 @@ export default function Footer ({showContactForm=true}:FooterProps){
             {showContactForm && <ContactForm />}
 
             <div className="text-[#0D6BF2] flex flex-col gap-6 mt-10 px-10">
+                {/**
                 <div className="flex justify-between">
                     <Link href='#'>Política de Privacidade</Link>
                     <Link href='#'>Termos de uso</Link>
@@ -25,8 +26,9 @@ export default function Footer ({showContactForm=true}:FooterProps){
                     <Facebook/>
                     <Instagram />
                 </div>
+                 */}
 
-                <p className="text-center">© 2024 Programa de Bolsas. Todos os direitos reservados.</p>
+                <p className="text-center">© 2025 Scholarship Angola Program. Todos os direitos reservados.</p>
             </div>
             
         </footer>

@@ -40,7 +40,7 @@ export default function Home() {
           <p className="text-[#0B0032]">Descubra oportunidades de bolsas de estudo para estudantes talentosos do Brasil e de países de língua portuguesa. Invista no seu futuro acadêmico e profissional com o nosso programa de bolsas.</p>
         </div>
 
-        <div className="flex mt-25 gap-4">
+        <div className="flex mt-25 gap-4 justify-center">
           <BenefitsCard icon={<GraduationCap />} description="Acesso a bolsas de estudo em universidades de renome, com foco em cursos de alta demanda no mercado." title="Oportunidades Exclusivas" imageUrl="/images/benefits-image1.png" />
 
           <div className="-translate-y-[50px]">
@@ -75,14 +75,14 @@ export default function Home() {
 
             <div className="flex flex-col gap-3">
               <FaqItem title="Quem pode se candidatar?">
-                Estudantes com média acadêmica igual ou superior a 8.5 e comprovante de matrícula em curso de graduação.
+                Estudantes com média acadêmica igual ou superior a 14 valores
               </FaqItem>
               <FaqItem title="Quais os critérios de seleção?">
-                Teste
+                Os critérios de seleção incluem análise de desempenho acadêmico, situação financeira e potencial de impacto social.
               </FaqItem>
 
               <FaqItem title="Como é o processo de aplicação?">
-                  Teste
+                O processo de aplicação envolve o preenchimento de um formulário online, envio de documentos comprobatórios e uma entrevista com a equipe de seleção.
               </FaqItem>
             </div>
 
