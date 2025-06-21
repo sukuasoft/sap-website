@@ -9,7 +9,7 @@ export default function ApplicationSection() {
             <h1 className="text-4xl font-bold mb-2">Requisitos para Bolsas de Estudo</h1>
             <p className="text-[#4F7096] mb-6">Verifique se você atende aos critérios para se candidatar a bolsas de estudo.</p>
 
-            <div className="flex">
+            <div className="flex justify-center">
                 <div>
                     <p className="font-bold text-lg mb-2">Critérios de Elegibilidade</p>
                     <div className="bg-[#F7FAFC] px-4 py-4  gap-4 flex flex-col">
