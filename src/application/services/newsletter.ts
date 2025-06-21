@@ -1,9 +1,10 @@
-import { supabase } from "@/services/supabase";
+import { createClient } from "@/services/supabase";
 import { Newsletter } from "../entities/newsletter";
 
 async function addNewsletter(
     email: string,
 ): Promise<Newsletter> {
+    const supabase = await createClient();
 
     const { data, error } = await supabase.from('newsletters').insert({
         email
@@ -17,6 +18,8 @@ async function addNewsletter(
 
 
 async function getNewsletterByEmail(email: string): Promise<Newsletter | null> {
+    const supabase = await createClient();
+
 
     const { data, error } = await supabase.from('newsletters').select('*').eq('email', email);
     if (error) {

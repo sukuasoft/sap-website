@@ -1,10 +1,12 @@
 import { Candidatura } from "@/application/entities/candidatura";
-import { supabase } from "@/services/supabase";
+import { createClient } from "@/services/supabase";
 
 
 async function saveCandidutra(
     candidatura: Omit<Candidatura, 'id' | 'created_at' | 'status'>
 ): Promise<Candidatura> {
+        const supabase = await createClient();
+    
 
     const { data, error } = await supabase.from('applications').insert(candidatura).select('*').single();
     if (error) {
@@ -16,6 +18,8 @@ async function saveCandidutra(
 
 
 async function getCandidaturas(): Promise<Candidatura[]> {
+        const supabase = await createClient();
+    
 
     const { data, error } = await supabase.from('applications').select('*');
     if (error) {
@@ -26,6 +30,8 @@ async function getCandidaturas(): Promise<Candidatura[]> {
 }
 
 async function getCandidaturaByBI(bi:string): Promise<Candidatura| null> {
+    const supabase = await createClient();
+
 
     const { data, error } = await supabase.from('applications').select('*').eq('bi', bi);
     if (error) {
