@@ -26,33 +26,33 @@ export default function Sobre() {
 
             <section className="px-20 py-20">
                 <div className="w-[550px]  mb-8">
-                      <h1 className="text-4xl font-bold mb-4">Princípios Fundamentais</h1>
-                <p>Nossa organização é construída sobre uma base de valores fortes que orientam nosso trabalho e interações.</p>
+                    <h1 className="text-4xl font-bold mb-4">Princípios Fundamentais</h1>
+                    <p>Nossa organização é construída sobre uma base de valores fortes que orientam nosso trabalho e interações.</p>
                 </div>
 
                 <div className="flex gap-4 mb-20">
                     <PrincipleItem title='Integridade' description='Mantemos os mais altos padrões éticos em todas as nossas ações.'
-                    icon={<ShieldCheck />} />
+                        icon={<ShieldCheck />} />
 
-                     <PrincipleItem title='Excelência' description='Nós buscamos a excelência em todos os aspectos dos nossos programas e serviços.'
-                    icon={<Trophy />} />
+                    <PrincipleItem title='Excelência' description='Nós buscamos a excelência em todos os aspectos dos nossos programas e serviços.'
+                        icon={<Trophy />} />
 
-                      <PrincipleItem title='Comunidade' description='Nós promovemos uma comunidade solidária e inclusiva de acadêmicos e líderes.'
-                    icon={<Users />} />
+                    <PrincipleItem title='Comunidade' description='Nós promovemos uma comunidade solidária e inclusiva de acadêmicos e líderes.'
+                        icon={<Users />} />
 
-                       <PrincipleItem title='Inovação' description='Abraçamos a inovação e a melhoria contínua para atender às necessidades em evolução da nossa comunidade.'
-                    icon={<Lamp />} />
+                    <PrincipleItem title='Inovação' description='Abraçamos a inovação e a melhoria contínua para atender às necessidades em evolução da nossa comunidade.'
+                        icon={<Lamp />} />
                 </div>
 
 
                 <h1 className="text-xl font-bold mb-8">Nosso impacto</h1>
                 <div className="flex gap-4">
-                    <ImpactItem title='Bolsas de estudo concedidas' value={250}/>
-                    <ImpactItem title='Estudantes apoiados' value={500}/>
-                    <ImpactItem title='Eventos comunitários' value={500}/>
+                    <ImpactItem title='Bolsas de estudo concedidas' value={250} />
+                    <ImpactItem title='Estudantes apoiados' value={500} />
+                    <ImpactItem title='Eventos comunitários' value={500} />
                 </div>
 
-              
+
 
             </section>
 
