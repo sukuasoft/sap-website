@@ -35,7 +35,7 @@ export default function ApplicationForm() {
     const { register, reset, handleSubmit } = useForm<FazerCandidaturaFormInputs>();
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const [submetted, setSubmitted] = useState<boolean>(true);
+    const [submetted, setSubmitted] = useState<boolean>(false);
 
     async function onSubmit(data: FazerCandidaturaFormInputs) {
 
