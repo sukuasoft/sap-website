@@ -14,9 +14,9 @@ export default function Sobre() {
 
             <Header isLong={false}>
                 <div className="bg-[url('/images/header-image3.png')]  bg-[#00000069] bg-blend-multiply  bg-cover bg-center w-full 
-        flex  flex-col justify-end text-white h-[450px]  py-20 px-20 ">
-                    <div className="w-[550px]">
-                        <h1 className="text-4xl font-bold mb-2">Transforme seu futuro com uma Bolsa de Estudos Exclusiva!</h1>
+        flex  flex-col justify-end text-white h-[450px]  py-20 px-20 max-sm:px-10">
+                    <div className="w-[550px] max-w-full">
+                        <h1 className="text-4xl max-md:text-2xl  font-bold mb-2">Transforme seu futuro com uma Bolsa de Estudos Exclusiva!</h1>
 
                     </div>
 
@@ -24,13 +24,13 @@ export default function Sobre() {
             </Header>
 
 
-            <section className="px-20 py-20">
-                <div className="w-[550px]  mb-8">
-                    <h1 className="text-4xl font-bold mb-4">Princípios Fundamentais</h1>
+            <section className="px-20 max-sm:px-10 py-20">
+                <div className="w-[550px]  mb-8  max-w-full">
+                    <h1 className="text-4xl max-md:text-2xl font-bold mb-4">Princípios Fundamentais</h1>
                     <p>Nossa organização é construída sobre uma base de valores fortes que orientam nosso trabalho e interações.</p>
                 </div>
 
-                <div className="flex gap-4 mb-20">
+                <div className="flex gap-4 mb-20 flex-wrap max-md:justify-center">
                     <PrincipleItem title='Integridade' description='Mantemos os mais altos padrões éticos em todas as nossas ações.'
                         icon={<ShieldCheck />} />
 
@@ -46,7 +46,7 @@ export default function Sobre() {
 
 
                 <h1 className="text-xl font-bold mb-8">Nosso impacto</h1>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap max-md:justify-center">
                     <ImpactItem title='Bolsas de estudo concedidas' value={250} />
                     <ImpactItem title='Estudantes apoiados' value={500} />
                     <ImpactItem title='Eventos comunitários' value={500} />
@@ -56,10 +56,10 @@ export default function Sobre() {
 
             </section>
 
-            <section className="px-20 pb-20">
+            <section className="px-20 max-sm:px-10 pb-20">
                 <h1 className="text-xl font-bold mb-8">Sobre a organização</h1>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 flex-wrap max-md:justify-center">
                     <Image src={organization} width={300} alt='' />
                     <div className="flex flex-col">
                         <h1 className="text-3xl font-bold mb-3">Nossa missão</h1>

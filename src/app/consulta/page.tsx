@@ -60,8 +60,8 @@ export default function Consulta() {
             <Navbar />
             <Header isLong={false}>
                 <div className="bg-[url('/images/header-image3.png')] bg-[#00000086] bg-blend-multiply bg-cover bg-center w-full 
-        flex  flex-col justify-center items-center text-white h-[450px] pt-40 pb-20 px-20 ">
-                    <form onSubmit={handleSubmit(onSubmit)} className="w-[550px]">
+        flex  flex-col justify-center items-center text-white min-h-[450px] pt-40 pb-20 px-20 max-sm:px-10">
+                    <form onSubmit={handleSubmit(onSubmit)} className="w-[550px] max-w-full">
                         <h1 className="text-4xl font-bold text-center">Consulte aqui o seu resultado</h1>
 
                         <input {...register('bi')} required maxLength={14} placeholder='Insira seu número do BI' type="text" id="contact-email"

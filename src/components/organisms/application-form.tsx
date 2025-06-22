@@ -69,7 +69,7 @@ export default function ApplicationForm() {
         <>
             <form id='aplicar' onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="text-4xl font-bold mt-10 mb-6">Submeter Candaditura</h1>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-6 max-sm:grid-cols-1">
 
                     <InputGroupApplicationForm {...register('nomeCompleto')} label="Nome Completo" placeholder="Insira o seu nome completo" />
                     <InputGroupApplicationForm {...register('idade')} min={16} max={25} type="number" label="Idade" placeholder="Insira a sua Idade" />

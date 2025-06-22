@@ -30,7 +30,7 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-start gap2 w-[550px]">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-start gap-1 w-[550px] max-w-full">
             <h1 className="text-xl font-bold mb-2">Contacto e Suporte</h1>
             <p>Para mais informações ou suporte, entre em contato conosco através do e-mail geral@sap.ao</p>
 

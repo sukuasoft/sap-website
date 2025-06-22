@@ -11,10 +11,10 @@ export default function FazerCandidatura() {
             <Navbar />
             <Header isLong={false}>
                 <div className="bg-[url('/images/header-image2.png')] bg-[#00000069] bg-blend-multiply bg-cover bg-center w-full 
-        flex  flex-col justify-center items-center text-white h-[450px] pt-40 pb-20 px-20 ">
-                    <div className="w-[550px]">
-                        <h1 className="text-4xl font-bold text-center">Transforme seu futuro com uma Bolsa de Estudos Exclusiva!</h1>
-                        <div className="flex gap-2 text-xl mt-10 justify-center">
+        flex  flex-col justify-center items-center text-white min-h-[450px] pt-40 pb-20 px-20 max-sm:px-10">
+                    <div className="w-[550px] max-w-full">
+                        <h1 className="text-4xl max-md:text-2xl font-bold text-center">Transforme seu futuro com uma Bolsa de Estudos Exclusiva!</h1>
+                        <div className="flex gap-2 text-xl mt-10 justify-center max-sm:flex-wrap">
                             <Link href='#aplicar'>
                                 <Button roundedVariant="secondary">Fazer Candidatura</Button>
                             </Link>

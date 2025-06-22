@@ -7,7 +7,7 @@ interface EligibilityCriteriaItemPros {
 }
 export default function EligibilityCriteriaItem ({icon, title, description}:EligibilityCriteriaItemPros){
 return (  
-    <div className="flex h-[60px] gap-4">
+    <div className="flex min-h-[60px] gap-4">
         <div className="bg-[#eee] flex-none flex items-center justify-center h-[60px] w-[60px]  rounded-xl">
             {icon}
         </div>

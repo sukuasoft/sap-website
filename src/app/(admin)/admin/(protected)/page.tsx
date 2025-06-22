@@ -133,7 +133,7 @@ export default function Dashboard() {
                 </nav>
                 <hr className="border-[#ffffff33] mt-4 mb-10" />
 
-                <div className="px-20 ">
+                <div className="px-20 max-sm:px-10">
                     <div className="w-[550px]">
                         <h1 className="text-4xl font-bold mb-2">Gestão de Candidatos</h1>
                         <p>Visualize, filtre e gerencie dados de candidatos</p>
@@ -142,7 +142,7 @@ export default function Dashboard() {
 
             </header>
 
-            <section className="px-20 pt-10">
+            <section className="px-20 max-sm:px-10 pt-10">
 
                 <div className="w-[550px]">
                     <h1 className="text-xl font-bold mb-2">Filtros</h1>
@@ -198,7 +198,7 @@ export default function Dashboard() {
 
             </section>
 
-            <section className="px-20 pb-10">
+            <section className="px-20 max-sm:px-10 pb-10">
                 <div className="flex gap-2 mb-4">
                     <Button isLoading={exporting} onClick={exportToExcel} className="flex gap-2">
                         <FileSpreadsheet />

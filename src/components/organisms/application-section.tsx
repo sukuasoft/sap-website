@@ -5,12 +5,12 @@ import ApplicationForm from "./application-form";
 
 export default function ApplicationSection() {
     return (
-        <section className="bg-[#F4F4F4] px-20 py-20">
-            <h1 className="text-4xl font-bold mb-2">Requisitos para Bolsas de Estudo</h1>
+        <section className="bg-[#F4F4F4] px-20 max-sm:px-10 py-20">
+            <h1 className="text-4xl max-md:text-2xl font-bold mb-2">Requisitos para Bolsas de Estudo</h1>
             <p className="text-[#4F7096] mb-6">Verifique se você atende aos critérios para se candidatar a bolsas de estudo.</p>
 
-            <div className="flex justify-center">
-                <div>
+            <div className="flex justify-center max-lg:flex-wrap max-lg:justify-start max-lg:gap-4">
+                <div className="flex-1">
                     <p className="font-bold text-lg mb-2">Critérios de Elegibilidade</p>
                     <div className="bg-[#F7FAFC] px-4 py-4  gap-4 flex flex-col">
 
@@ -22,7 +22,7 @@ export default function ApplicationSection() {
                     </div>
                 </div>
 
-                <div>
+                <div className="flex-1">
                     <p className="font-bold text-lg mb-2">Documentos Necessários</p>
 
                     <div className="bg-[#F7FAFC]  px-4 py-4 gap-4  flex flex-col">

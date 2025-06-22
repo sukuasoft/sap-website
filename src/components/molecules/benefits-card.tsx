@@ -6,10 +6,10 @@ interface BenefitsCardProps {
 }
 export default function BenefitsCard({ imageUrl, title, description, icon }: BenefitsCardProps) {
     return (
-        <div className={`h-[500px] bg-cover bg-center flex flex-col py-4 px-2 rounded-2xl`}
+        <div className={`aspect-[1/1.6] bg-cover bg-center flex flex-col py-4 px-2 rounded-2xl`}
             style={{ backgroundImage: `url(${imageUrl})` }}>
 
-            <div className="w-[300px]   mt-auto p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg">
+            <div className="w-[300px] max-lg:w-[200px] max-w-full  mt-auto p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg">
                 <div className="flex flex-col items-start gap-2">
                    {icon}
                     <div>

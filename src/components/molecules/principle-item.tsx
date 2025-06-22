@@ -5,7 +5,7 @@ interface PrincipleItemProps {
 }
 export default function PrincipleItem({ title, description, icon }: PrincipleItemProps) {
     return (
-        <div className="w-[300px]  h-[200px]   mt-auto p-4 rounded-xl border border-solid border-[#eee]">
+        <div className="w-[300px] aspect-[2/1] max-w-full   mt-auto p-4 rounded-xl border border-solid border-[#eee]">
             <div className="flex flex-col items-start gap-2">
                 {icon}
                 <div>
