@@ -108,16 +108,16 @@ export default function Dashboard() {
     return (
         <div>
             <header className="bg-[#002B80] py-5 text-white">
-                <nav className="flex items-center px-20 ">
+                <nav className="flex items-center px-20 max-sm:px-10">
                     <div className="flex gap-4 items-center">
                         <Link href='/'>
                             <Image src={icon} className=" brightness-0 invert" width={70} alt='' />
                         </Link>
-                        <span className="font-bold">Dasboard</span>
+                        <span className="font-bold max-sm:hidden">Dashboard</span>
                     </div>
 
-                    <div className="flex gap-4 ml-auto items-center">
-                        <div className="bg-[#eee] rounded-full w-fit px-2 py-2">
+                    <div className="flex gap-2 ml-auto items-center">
+                        <div className="bg-[#eee] rounded-full w-fit px-2 py-2 max-sm:hidden">
                             <User className="text-[#303030]" />
                         </div>
 
@@ -134,7 +134,7 @@ export default function Dashboard() {
                 <hr className="border-[#ffffff33] mt-4 mb-10" />
 
                 <div className="px-20 max-sm:px-10">
-                    <div className="w-[550px]">
+                    <div className="w-[550px] max-w-full">
                         <h1 className="text-4xl font-bold mb-2">Gestão de Candidatos</h1>
                         <p>Visualize, filtre e gerencie dados de candidatos</p>
                     </div>
@@ -144,7 +144,7 @@ export default function Dashboard() {
 
             <section className="px-20 max-sm:px-10 pt-10">
 
-                <div className="w-[550px]">
+                <div className="w-[550px] max-w-full">
                     <h1 className="text-xl font-bold mb-2">Filtros</h1>
                     <div className="flex gap-2  w-full mb-6 bg-[#F7FAFC] items-center border-[#CFD9E8] border border-solid rounded-xl px-4  py-2">
                         <Search className="text-[#4A6B9C]" size={18} />
@@ -199,7 +199,7 @@ export default function Dashboard() {
             </section>
 
             <section className="px-20 max-sm:px-10 pb-10">
-                <div className="flex gap-2 mb-4">
+                <div className="flex gap-2 mb-4 max-md:flex-wrap">
                     <Button isLoading={exporting} onClick={exportToExcel} className="flex gap-2">
                         <FileSpreadsheet />
                         Download Excel
@@ -210,15 +210,16 @@ export default function Dashboard() {
                         Limpar filtros
                     </Button>
                 </div>
-                <table className="w-full">
-                    <thead className=" border-solid border-[#aaa] border-b ">
+                <div className="overflow-x-auto w-full">
+                <table>
+                    <thead className=" bg-[#000] text-white ">
                         <tr>
                             {
                                 ['Nome', 'BI', 'Idade', 'Telefone', 'Email',
                                     'Instuição', 'Curso', 'Ano de Início', 'Ano de Conclusão', 'Média Final',
                                     'Renda Familiar Mensal', 'Estado', 'Submetido em', 'Comprovante de Matrícula', 'Documento de Identificação', 'Comprovante de Renda', 'Certificado/Histórico Escolar'
                                 ].map((header, index) => (
-                                    <th key={index} className="px-4 py-1">{header}</th>
+                                    <th key={index} className="px-4 py-1 border-solid border-r border-[#303030]">{header}</th>
                                 ))
                             }
 
@@ -226,7 +227,7 @@ export default function Dashboard() {
                     </thead>
                     <tbody className="text-center">
                         {candidaturasFiltered.map((candidatura, index) => {
-                            const styles = `${index % 2 == 0 && 'bg-[#eee]'} px-2 py-2`;
+                            const styles = `${index % 2 == 0 && 'bg-[#eee]'} px-2 py-2 border-solid border-r border-l border-[#aaa]`;
                             return (
                                 <tr key={candidatura.id}>
                                     <td className={styles}>{candidatura.nome_completo}</td>
@@ -249,13 +250,11 @@ export default function Dashboard() {
                                         </Link>
                                     </td>
 
-
                                     <td className={styles}>
                                         <Link href={candidatura.documento_identificacao_url} target="_blank" rel="noopener noreferrer">
                                             <CloudDownload />
                                         </Link>
                                     </td>
-
 
                                     <td className={styles}>
                                         <Link href={candidatura.comprovante_renda_url} target="_blank" rel="noopener noreferrer">
@@ -273,6 +272,7 @@ export default function Dashboard() {
                         })}
                     </tbody>
                 </table>
+                </div>
             </section>
         </div>
     );

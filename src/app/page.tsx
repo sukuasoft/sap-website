@@ -55,7 +55,7 @@ export default function Home() {
           <div className="w-[450px] max-w-full">
             <h1 className="font-bold text-2xl max-sm:text-xl mb-2">Sobre a Bolsa de Estudo</h1>
             <p className="font-[400]">A Bolsa de Estudo Éxito é uma iniciativa que visa apoiar estudantes talentosos e dedicados, mas com recursos financeiros limitados, a alcançar seus objetivos acadêmicos. </p>
-            <div className="grid grid-cols-2 mt-20 gap-6">
+            <div className="grid grid-cols-2 mt-20 max-sm:mt-10 gap-6 max-sm:grid-cols-1">
                 <AboutDetailsItem title="Mensalidade" description="Cobre integralmente as mensalidades do curso escolhido." />
                 <AboutDetailsItem title="Transporte" description="Auxílio para despesas com transporte." />
                 <AboutDetailsItem title="Alimentação" description="Subsídio para gastos com alimentação." />

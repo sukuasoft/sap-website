@@ -32,16 +32,16 @@ type FazerCandidaturaFormInputs = {
 
 
 export default function ApplicationForm() {
-    const { register, reset,handleSubmit } = useForm<FazerCandidaturaFormInputs>();
+    const { register, reset, handleSubmit } = useForm<FazerCandidaturaFormInputs>();
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const [submetted, setSubmitted] = useState<boolean>(false);
+    const [submetted, setSubmitted] = useState<boolean>(true);
 
     async function onSubmit(data: FazerCandidaturaFormInputs) {
 
         setIsLoading(true);
         try {
-          await  fazerCandidaturaUseCase({
+            await fazerCandidaturaUseCase({
                 ...data,
                 anoConclusao: parseInt(data.anoConclusao),
                 anoInicio: parseInt(data.anoInicio.toString()),
@@ -67,6 +67,7 @@ export default function ApplicationForm() {
 
     return (
         <>
+
             <form id='aplicar' onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="text-4xl font-bold mt-10 mb-6">Submeter Candaditura</h1>
                 <div className="grid grid-cols-2 gap-6 max-sm:grid-cols-1">
@@ -97,7 +98,7 @@ export default function ApplicationForm() {
                 submetted &&
 
                 <div className="fixed top-0 left-0 w-full h-full bg-white z-50 flex items-center justify-center">
-                    <div className={`bg-white p-10 rounded-lg shadow-lg flex flex-col w-[350px] items-center gap-2 `}>
+                    <div className={`bg-white p-10 rounded-lg shadow-lg flex flex-col w-[350px] max-w-full items-center gap-2 `}>
                         <div className="bg-green-500 px-2 py-2 rounded-full">
                             <CheckCircle color="#ffffff" size={30} />
                         </div>

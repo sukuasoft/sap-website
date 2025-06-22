@@ -43,7 +43,7 @@ export default function Login() {
         <div className="flex flex-col justify-center items-center w-full h-screen">
             <Image src={icon} width={100} alt='' />
 
-            <div className='shadow-md rounded-xl px-10 py-6 mt-4 w-[450px]'>
+            <div className='shadow-md rounded-xl px-10 py-6 mt-4 w-[450px] max-w-full'>
                 <h1 className='text-xl font-bold text-center mb-2'>Acesse sua conta</h1>
                 <hr className='border-[#eee] mb-6' />
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-3 '>
